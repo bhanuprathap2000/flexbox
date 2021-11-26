@@ -1,0 +1,137 @@
+.box {
+  color: "white";
+  font-size: 100px;
+  text-align: center;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.box1 {
+  background-color: #00bfff;
+}
+
+.box2 {
+  background-color: #ff4500;
+}
+
+.box3 {
+  background-color: #ffa500;
+}
+
+.box4 {
+  background-color: #00ff00;
+}
+
+.box5 {
+  background-color: #0000ff;
+}
+
+.box6 {
+  background-color: #ff0000;
+}
+
+.box7 {
+  background-color: #ffff00;
+}
+
+.box8 {
+  background-color: #00ffff;
+}
+
+.box9 {
+  background-color: #000000;
+}
+
+.box10 {
+  background-color: #ffffff;
+}
+
+.container {
+  display: flex;
+  border: 10px solid goldenrod;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100vh;
+  /* align-items: center; */
+  /* align-content: space-around; */
+  /* 
+    justify-content is for managing the space between the items along the main axis.
+    align-items is for managing the position(position means where there are present not the gap) of the items along the cross axis.
+    align-content is for managing the space between the items along the cross axis.(this take cares of the gap between the items along the cross axis)
+    */
+  /*
+    in order to align items along the main axis, we need to use the justify content property.
+    in order to align items along the cross axis, we need to use the align items property.
+    by defalut the align-items is stretch, which means that items will be stretched to fill the available space.
+    and baseline property is very useful when we want ot align items based on the base line of the text.
+    */
+  /*
+    browser tries to put all the items in the container in a single line and if nowrap then contents are overflow
+  if the container is not wide enough and flex-wrap is wrap
+  then it will break the line and put the items in the next line
+  for flex-direction the item take the entire height and for column the total width
+  wrap-reverse will rotate the cross axis and main axis remain the same.
+  */
+  /* if we make a container flex then it's immediate children will become the flex items
+  and the container will be the flex container flex will take the entire row or column but inline-flex will take only the content space
+  for observing that open developer tools and inspect
+
+  ----
+  flex-direction
+    row
+    row-reverse
+    column
+    column-reverse
+
+    There are 2 axis in flexbox and they are main axis and cross axis and they are used to align the items in the flex container
+    main axis is the axis that the flex items will be placed in the flex container
+cross axis is the axis that is perpendicular to the main axis
+
+  */
+}
+
+.box {
+  width: 300px;
+  flex:1
+  /*
+  this is set on the flex item this is used to set size of the flex item in the flex container
+  if we set 1 then all the items will be same size if the set 2 then the first item will be twice the size of the second item(example)
+  this can be of fractional value like 1.5
+  */
+
+  /* we gave the width of 300px by default flex-wrap on the container is nowrap this means 
+
+  */
+}
+
+.box4 {
+  order: 1;
+  /* this order property is present on the flex item and this gives the order to the flex items
+   by default the order is 0 and the order of the flex items are in ascending order
+   and if we give order as 1 for one item it will be placed at the end if all others are 0
+    and if we give order as 2 for one item it will be placed at the second last if all others are 0
+    and so on 
+
+    This is useful for altering the order of html without actually changing the order of the flex items
+    and use it only for layout and not text
+    */
+}
+
+.box5 {
+  padding-bottom: 2rem;
+  /* align-self: flex-end; */
+  /* this property is for flex items in order to overide the container alignment */
+}
+
+.box1 {
+  flex: 2;
+  /* this is a shorthand notaion for flex-grow,flex-shrink and flex-basis properties
+  flex-grow is for when size is increasing how should the extra be handled(default 0 means the extra space is not taken and given to the flex item)
+    flex-shrink is for when size is decreasing how should the extra be handled(default 1 means the items are are shrunk evenly)
+    flex-basis is for the size of the flex item(initial size)
+  */
+  /* this box will teice the other boxes of 1 here no px or rem all in proportions*/
+}
+
+/* for flex-direction column we need to have the height */
